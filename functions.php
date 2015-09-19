@@ -10,7 +10,7 @@ Function readTextFile($fname)
 	return $wordArray = file($fname, FILE_IGNORE_NEW_LINES);
 }
 
-function selectWords($words, $numOfWords, $separator, $camelCase)
+function selectWords($words, $numOfWords, $separator)
 {
 	//pick a random word location 
 	$wordNumber = array_rand($words);	
@@ -25,21 +25,23 @@ function selectWords($words, $numOfWords, $separator, $camelCase)
 		$wordNumber = array_rand($words);
 
 		//add in the separator if selected
-		if ($separator != NULL)
-		{
-			$password = $password . $separator;
-		}
-
-		//change the word to camel case if selected
-		if ($camelCase != NULL)
-		{
-			$password = $password . ucwords($words[$wordNumber]);
-		}
-		else
-		{
-			//concatenate the final string
-			$password = $password . $words[$wordNumber];
-		}	
+		//if ($separator != NULL)
+		//{
+			if ($separator == "1")
+			{
+				$password = $password . ucwords($words[$wordNumber]);
+			}
+			else
+			{
+				//concatenate the final string
+				$password = $password . $separator . $words[$wordNumber];
+			}
+		//}
+		//else
+		//{
+			//concatenate words to the final string
+		//	$password = $password . $words[$wordNumber];
+		//}	
 	}
 	return $password;
 }
