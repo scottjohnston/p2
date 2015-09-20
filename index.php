@@ -40,62 +40,77 @@
 
 
          <div class="row">
-            <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">
-               <h3>Put the form in here</h3>
+            <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 form-group text ">
+               <h2>Password generator</h2>
                <p>
-                  Explanation of the site
+                  yada yad here is how it works!!!
                </p>
+               <h4>
+
                <?php
                      //here is where the logic for the password generator is
                      require_once "logic.php";
                ?>
+                  </h4>
+               <br>
             </section>
          </div>
          <div class="row">
             <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">
-               <h3>more stuff</h3>
                
 
-               <form action="index.php" method="get" class="form-horizontal">
-                  <label for="numberOfWords">Number of words</label>
-                  <input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value=""> <br>
+               <form action="index.php" method="get" class="form-horizontal" role="form">
 
-                  <input type="checkbox" name="numberInc" value="1">Include a number?<br>
+                  <div class="form-group">
+                     <label for="numberOfWords">Number of words
+                        <input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value="" class="form-control"> 
+                     </label>
+                  </div>
 
-                  <input type="radio" name="separator" value=" ">Use a space as a separator<br>
-                  <input type="radio" name="separator" value="-">Use a - as a separator<br>
-                  <input type="radio" name="separator" value="camel">Use camel case as a separator<br>
+                  <div class="form-group checkbox">
+                     <label for="numberInc">
+                        <input type="checkbox" name="numberInc" value="1">Include a number?
+                     </label>
+                  </div>
 
-                  <label for="numSpecChar">Number of special Characters</label>
-                  <input maxlength="1" type="text" name="numSpecChar" id="numSpecChar" value=""><br>
+                  <div class="form-group radio">
+                     <label>
+                        <input type="radio" name="separator" value=" ">Use a space as a separator
+                     </label>
+                  </div>
 
-                  <label for="maximumLength">Maximum Length</label>
-                  <input maxlength="2" type="text" name="maximumLength" id="maximumLength" value=""> <br>
+                  <div class="form-group radio">
+                     <label>
+                        <input type="radio" name="separator" value="-">Use a - as a separator
+                     </label>
+                  </div>
+
+                  <div class="form-group radio">
+                     <label>
+                        <input type="radio" name="separator" value="camel">Use camel case as a separator
+                     </label>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="numSpecChar">Number of special Characters
+                        <input maxlength="1" type="text" name="numSpecChar" id="numSpecChar" value="" class="form-control">
+                     </label>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="maximumLength">Maximum Length
+                        <input maxlength="2" type="text" name="maximumLength" id="maximumLength" value="" class="form-control">
+                     </label>
+                  </div>
                  
                   <p>
-                     <input type="submit" value="Generate Password">
+                     <input type="submit" value="Generate Password" class="btn btn-primary">
                   </p>
                </form>
             
             </section>
-         <div class="row">
-            <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">   
-               <p>
-                
-               </p>
 
 
-            </section>
-            </div>
-
-           <div class="row">
-            <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">    
-               <p>
-                  This is the function test
-               </p>
-
-            </section>
-         </div>
          </div>
       <footer class="text-center">
          <a href="http://dwa15.com/" data-toggle="tooltip" title="Course web site">dwa 15</a>
