@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <?php
-         //require_once "functions.php";
-         
-         //$wordLilst = readTextFile("wordList.txt");
-      ?>
+
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,37 +39,35 @@
 
 
 
-
          <div class="row">
             <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">
                <h3>Put the form in here</h3>
                <p>
                   Explanation of the site
                </p>
+               <?php
+                     //here is where the logic for the password generator is
+                     require_once "logic.php";
+               ?>
             </section>
          </div>
          <div class="row">
             <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">
                <h3>more stuff</h3>
-               <p>
-                  <?php
-                     require_once "logic.php";
-                  ?>
-               </p>
-
+               
 
                <form action="index.php" method="get" class="form-horizontal">
                   <label for="numberOfWords">Number of words</label>
-                  <input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value="4"> <br>
+                  <input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value=""> <br>
 
                   <input type="checkbox" name="numberInc" value="1">Include a number?<br>
 
                   <input type="radio" name="separator" value=" ">Use a space as a separator<br>
                   <input type="radio" name="separator" value="-">Use a - as a separator<br>
-                  <input type="radio" name="separator" value="1">Use a camel case as a separator<br>
+                  <input type="radio" name="separator" value="camel">Use camel case as a separator<br>
 
-                  <label for="specChar">Number of special Characters</label>
-                  <input maxlength="1" type="text" name="specChar" id="specChar" value="0"><br>
+                  <label for="numSpecChar">Number of special Characters</label>
+                  <input maxlength="1" type="text" name="numSpecChar" id="numSpecChar" value=""><br>
 
                   <label for="maximumLength">Maximum Length</label>
                   <input maxlength="2" type="text" name="maximumLength" id="maximumLength" value=""> <br>
@@ -86,44 +80,20 @@
             </section>
          <div class="row">
             <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">   
+               <p>
+                
+               </p>
 
 
             </section>
             </div>
-
-
-
-
 
            <div class="row">
             <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">    
                <p>
                   This is the function test
                </p>
-               <?php
-                    $pass = selectWords($wordLilst, 4, "-");
 
-                    $pass = addSpecialChar($pass, "@", 2);
-
-                  
-                  echo "<br>"."omg"." add numbers </br>";
-
-                  $pass = addNumbers($pass, 3);
-
-                  echo $pass;
-
-                  echo "<br>"."omg max length </br>";
-
-                  $pass = maxLength($pass, 20);
-
-                  echo $pass;
-
-                   echo "<br>"."camel case </br>";
-
-
-                  echo $pass;
-
-               ?>
             </section>
          </div>
          </div>

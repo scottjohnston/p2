@@ -1,56 +1,62 @@
 <?php
 
 
-Function readTextFile($fname)
+Function readInFile($fname)
 {
 	if(!file_exists($fname))
 	{
-		exit("exit");//could contain an exception
+		throw new Exception("file not found");
 	}
-	return $wordArray = file($fname, FILE_IGNORE_NEW_LINES);
+	else
+	{
+		return $wordArray = file($fname, FILE_IGNORE_NEW_LINES);
+	}
 }
+
+
 
 function selectWords($words, $numOfWords, $separator)
 {
 	//pick a random word location 
-	$wordNumber = array_rand($words);	
+	$wordNumber = rand(0, count($words));	
 
-	//get the word from the array
-	$password = $words[$numOfWords];
+	//
+	$password = "";
 
 	//if more than one word is needed loop
-	for ($x = 1; $x <= $numOfWords; $x++)
+	for ($x = 0; $x < $numOfWords; $x++)
 	{
-		//pick the second word number from the array
-		$wordNumber = array_rand($words);
+		//pick the second and subsequent word number from the array
+		$wordNumber = rand(0, count($words));
 
-		//add in the separator if selected
-		//if ($separator != NULL)
-		//{
-			if ($separator == "1")
-			{
-				$password = $password . ucwords($words[$wordNumber]);
-			}
-			else
-			{
-				//concatenate the final string
-				$password = $password . $separator . $words[$wordNumber];
-			}
-		//}
-		//else
-		//{
-			//concatenate words to the final string
-		//	$password = $password . $words[$wordNumber];
-		//}	
+		//test to see if camel code is selected
+		if ($separator == "camel")
+		{
+			//Camel code the words
+			//$password = ucwords($password);
+			$password = $password . ucwords($words[$wordNumber]);
+		}
+		elseif ($x < 1)	
+		{
+			$password = $words[$wordNumber];
+		}
+		else
+		{
+			//concatenate the final string
+			$password = $password . $separator . $words[$wordNumber];
+		}			
 	}
 	return $password;
 }
 
+
+
+
 function addSpecialChar ($words, $specChar, $numOfChars)
 {
-	for($x = 0;$x < $numOfChars; $x++ )
+	for($x = 0; $x < $numOfChars; $x++ )
 	{
-		 $words = $words. $specChar;
+		$words = $words . $specChar;
 	}
 	return $words;
 }	
@@ -66,7 +72,7 @@ function addNumbers ($words, $nWords)
 
 function maxlength ($words, $maxLen)
 {
-	return substr($words, $maxLen);
+	return substr($words, 0, $maxLen);
 }
 
 
