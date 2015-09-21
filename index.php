@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--index.html Project 2 Scott Johnston dwa15-->
 <html>
    <head>
 
@@ -10,6 +11,9 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+      <link rel="stylesheet" type="text/css" href="css/scottsCss.css">
+
+      <!-- A bit of customization-->
       <title>Scott Johnston P2 Dynamic Web Apps</title>
 
    </head>
@@ -18,7 +22,7 @@
 
          <!-- This is the jumbotron for the site************************* -->
          <header class="jumbotron">
-            <h1>Project 2<br><small>Scott Johnston</small></h1>
+            <h1 class="centerHeading">Project 2 Password Generator<br><small>Scott Johnston</small></h1>
          </header>
 
          <!-- Links to the other projects-->
@@ -38,80 +42,87 @@
          </div>
 
 
-
+         <!-- instructions -->
          <div class="row">
-            <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 form-group text ">
-               <h2>Password generator</h2>
+            <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 form-group text scottsSection">
+               <h2 class="centerHeading">How to use it</h2>
                <p>
-                  yada yad here is how it works!!!
+                  Select the number of words to include in your pass word. 
+                  Also select to have a space, a hyphen or camel case capitalization used as a separator between the words supplied.
+                  Add in between 1 and 9 special characters between the words and any number you may have selected. Select if you want 
+                  a random number between 1 and 1000 added to the end.
                </p>
-               <h4>
+            </section>
 
-               <?php
-                     //here is where the logic for the password generator is
+
+            <!--Where all the action is displayed -->
+            <section id="#passwordSection" class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 scottsSection">
+               
+                  <?php
+                     //here is where the logic for the password generator is called and displayed
                      require_once "logic.php";
-               ?>
-                  </h4>
-               <br>
+                  ?>            
             </section>
          </div>
+
+
+         <!--Where the form to select everything begins-->
          <div class="row">
             <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">
                
-
-               <form action="index.php" method="get" class="form-horizontal" role="form">
+               <form action="index.php" method="get" class="form-horizontal" >
 
                   <div class="form-group">
-                     <label for="numberOfWords">Number of words
-                        <input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value="" class="form-control"> 
+                     <label for="numberOfWords">Number of words between 1 and 9
+                        <input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value="" class="form-control scottsTextBox"> 
                      </label>
                   </div>
-
-                  <div class="form-group checkbox">
-                     <label for="numberInc">
-                        <input type="checkbox" name="numberInc" value="1">Include a number?
-                     </label>
-                  </div>
-
-                  <div class="form-group radio">
-                     <label>
+                  <div class="form-group radio">  
+                     <label>                  
                         <input type="radio" name="separator" value=" ">Use a space as a separator
                      </label>
                   </div>
 
                   <div class="form-group radio">
                      <label>
-                        <input type="radio" name="separator" value="-">Use a - as a separator
+                        <input type="radio" name="separator" value="-">Use a - as a separator between the words
                      </label>
                   </div>
 
                   <div class="form-group radio">
                      <label>
-                        <input type="radio" name="separator" value="camel">Use camel case as a separator
+                        <input type="radio" name="separator" value="camel">Use camel case as a separator between the words
                      </label>
                   </div>
 
                   <div class="form-group">
-                     <label for="numSpecChar">Number of special Characters
-                        <input maxlength="1" type="text" name="numSpecChar" id="numSpecChar" value="" class="form-control">
+                     <label for="numSpecChar">Number of random special Characters between 1 and 9
+                        <input maxlength="1" type="text" name="numSpecChar" id="numSpecChar" value="" class="form-control scottsTextBox">
+                     </label>
+                  </div>
+
+                  <div class="form-group checkbox">
+                     <label>
+                        <input type="hidden" name="numberInc" value="">
+                        <input type="checkbox" name="numberInc" value="1">Include a number between 1 and 1000?
                      </label>
                   </div>
 
                   <div class="form-group">
-                     <label for="maximumLength">Maximum Length
-                        <input maxlength="2" type="text" name="maximumLength" id="maximumLength" value="" class="form-control">
+                     <label for="maximumLength">Maximum character length
+                        <input maxlength="3" type="text" name="maximumLength" id="maximumLength" value="" class="form-control scottsTextBox">
                      </label>
                   </div>
                  
                   <p>
                      <input type="submit" value="Generate Password" class="btn btn-primary">
                   </p>
-               </form>
-            
+               </form>           
             </section>
-
+            <!-- end of the form-->
 
          </div>
+      </div>
       <footer class="text-center">
          <a href="http://dwa15.com/" data-toggle="tooltip" title="Course web site">dwa 15</a>
       </footer>
@@ -123,5 +134,6 @@
              $('[data-toggle="tooltip"]').tooltip();   
          });
       </script>
+
    </body>
 </html>

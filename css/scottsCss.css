@@ -1,0 +1,27 @@
+/** scottsCss.css Project 2 Scott Johnston dwa15-
+*   a few adjustments to the css to make the password and headings stand out
+*/
+         /*resizes the text box*/
+         .scottsTextBox
+         {
+            width: 50px;
+         }
+
+         /*lines up the text with the form*/
+         .scottsSection
+         {
+            padding-left: 0;
+         }
+
+         /*makes the password stand out*/
+         .passwordSection
+         {
+            background-color: #CCFFFF;
+            text-align: center;
+         }
+
+         /*Lines up the headings with the form*/
+         .centerHeading
+         {
+            text-align: center;
+         }
