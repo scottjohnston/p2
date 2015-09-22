@@ -53,14 +53,8 @@
 		$passWords = maxLength($passWords, $userArray["maximumLength"] );
 
 
-
-
 	//display the password
 	echo '<h4 class="passwordSection"> <br>' . $passWords . '</h4>';
-
-
-
-
 
 
 

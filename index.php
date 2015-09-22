@@ -28,7 +28,7 @@
          <!-- Links to the other projects-->
          <div class="row">
             <div class="center-block">
-               <ul class="list-inline nav nav-tabs nav-justified col-md-12  col-xs-12 col-sm-8 coll-sm-offset-1 col-lg-12 ">
+               <ul class="list-inline nav nav-tabs nav-justified col-md-12 col-xs-12 col-sm-8 coll-sm-offset-1 col-lg-12 ">
                   <li><a href="http://p1.scottvjohnston.me" data-toggle="tooltip" title="Project 1"> Project 1</a></li>
                   <li><a href="https://github.com/scottjohnston/p1" data-toggle="tooltip" title="Github P1">Git project 1</a></li>
                   <li><a href="http://p2.scottvjohnston.me" data-toggle="tooltip" title="Project 2">Project 2</a></li>

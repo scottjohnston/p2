@@ -55,3 +55,5 @@ resizes the text boxes and aligns the different headings so that they all look
 good on a phone screen as well as a pc Provides some color for the password
 
 [p2.scottvjohnston.me](http://p2.scottvjohnston.me/)
+
+[screen cast link is](http://screencast.com/t/TKZuMZeGc)
