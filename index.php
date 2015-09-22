@@ -50,7 +50,10 @@
                   Select the number of words to include in your pass word. 
                   Also select to have a space, a hyphen or camel case capitalization used as a separator between the words supplied.
                   Add in between 1 and 9 special characters between the words and any number you may have selected. Select if you want 
-                  a random number between 1 and 1000 added to the end.
+                  a random number between 1 and 1000 added to the end. 
+               </p>
+               <p>
+                  If the number of words is not selected 4 words will be used
                </p>
             </section>
 

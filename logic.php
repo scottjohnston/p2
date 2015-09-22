@@ -32,7 +32,7 @@
 	$separator = "";
 
 	//check that the variable keys exist in the userArray and load them if they do
-	if (array_key_exists("numberOfWords", $userArray ) && is_numeric($userArray["numberOfWords"]))
+	if (array_key_exists("numberOfWords", $userArray ) && is_numeric($userArray["numberOfWords"]) && ($userArray["numberOfWords"] > 0 ))
 		$numberOfWords = $userArray["numberOfWords"];
 	if (array_key_exists("separator", $userArray ))
 		$separator = $userArray["separator"];
