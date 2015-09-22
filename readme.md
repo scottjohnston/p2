@@ -1,4 +1,4 @@
-#This is Project 2 for Dwa15 Scott Johnston
+#This is Project 2 for Dwa15 Scott Johnston password generator
 
 ##logic.php
 
