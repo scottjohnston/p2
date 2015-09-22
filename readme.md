@@ -44,4 +44,14 @@ returns a substring of the password
 
 returns a random special character from an array of special chars
 
+##index.php 
+
+similar template to project one there is some custom css in scottsCss.css
+
+##scottsCss.css
+
+resizes the text boxes and aligns the different headings so that they all look
+
+good on a phone screen as well as a pc Provides some color for the password
+
 [p2.scottvjohnston.me](http://p2.scottvjohnston.me/)
