@@ -29,9 +29,9 @@
          <div class="row">
             <div class="center-block">
                <ul class="list-inline nav nav-tabs nav-justified col-md-12  col-xs-12 col-sm-8 coll-sm-offset-1 col-lg-12 ">
-                  <li><a href="../p1/index.php" data-toggle="tooltip" title="Project 1"> Project 1</a></li>
+                  <li><a href="http://p1.scottvjohnston.me" data-toggle="tooltip" title="Project 1"> Project 1</a></li>
                   <li><a href="https://github.com/scottjohnston/p1" data-toggle="tooltip" title="Github P1">Git project 1</a></li>
-                  <li><a href="index.php" data-toggle="tooltip" title="Project 2">Project 2</a></li>
+                  <li><a href="http://p2.scottvjohnston.me" data-toggle="tooltip" title="Project 2">Project 2</a></li>
                   <li><a href="https://github.com/scottjohnston/p2" data-toggle="tooltip" title="Github P2">git project 2</a></li>
                   <li><a href="#" data-toggle="tooltip" title="Project 3">Project 3</a></li>
                   <li><a href="#" data-toggle="tooltip" title="Github P3">git project 3</a></li>
@@ -45,7 +45,7 @@
          <!-- instructions -->
          <div class="row">
             <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 form-group text scottsSection">
-               <h2 class="centerHeading">How to use it</h2>
+               <h2>How to use it</h2>
                <p>
                   Select the number of words to include in your pass word. 
                   Also select to have a space, a hyphen or camel case capitalization used as a separator between the words supplied.
@@ -56,19 +56,17 @@
 
 
             <!--Where all the action is displayed -->
-            <section id="#passwordSection" class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 scottsSection">
+            <div id="#passwordSection" class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 scottsSection">
                
-                  <?php
-                     //here is where the logic for the password generator is called and displayed
-                     require_once "logic.php";
-                  ?>            
-            </section>
+                  <!--//here is where the logic for the password generator is called and displayed-->
+                  <?php require_once "logic.php"; ?>            
+            </div>
          </div>
 
 
          <!--Where the form to select everything begins-->
          <div class="row">
-            <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">
+            <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">
                
                <form action="index.php" method="get" class="form-horizontal" >
 
@@ -118,7 +116,7 @@
                      <input type="submit" value="Generate Password" class="btn btn-primary">
                   </p>
                </form>           
-            </section>
+            </div>
             <!-- end of the form-->
 
          </div>
