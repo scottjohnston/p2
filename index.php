@@ -47,7 +47,7 @@
             <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 form-group text scottsSection">
                <h2>How to use it</h2>
                <p>
-                  Select the number of words to include in your pass word. 
+                  Select the number of words to include in your password. 
                   Also select to have a space, a hyphen or camel case capitalization used as a separator between the words supplied.
                   Add in between 1 and 9 special characters between the words and any number you may have selected. Select if you want 
                   a random number between 1 and 1000 added to the end. 
@@ -75,7 +75,7 @@
 
                   <div class="form-group">
                      <label for="numberOfWords">Number of words between 1 and 9
-                        <input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value="" class="form-control scottsTextBox"> 
+                        <input maxlength="1" type="number" name="numberOfWords" id="numberOfWords" value="" class="form-control scottsTextBox"> 
                      </label>
                   </div>
                   <div class="form-group radio">  
@@ -98,7 +98,7 @@
 
                   <div class="form-group">
                      <label for="numSpecChar">Number of random special Characters between 1 and 9
-                        <input maxlength="1" type="text" name="numSpecChar" id="numSpecChar" value="" class="form-control scottsTextBox">
+                        <input maxlength="1" type="number" name="numSpecChar" id="numSpecChar" value="" class="form-control scottsTextBox">
                      </label>
                   </div>
 
@@ -111,7 +111,7 @@
 
                   <div class="form-group">
                      <label for="maximumLength">Maximum character length
-                        <input maxlength="3" type="text" name="maximumLength" id="maximumLength" value="" class="form-control scottsTextBox">
+                        <input maxlength="3" type="number" name="maximumLength" id="maximumLength" value="" class="form-control scottsTextBox">
                      </label>
                   </div>
                  
