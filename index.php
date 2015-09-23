@@ -45,7 +45,7 @@
          <!-- instructions -->
          <div class="row">
             <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 form-group text scottsSection">
-               <h2>How to use it</h2>
+               <h2>Generate a password</h2>
                <p>
                   Select the number of words to include in your password. 
                   Also select to have a space, a hyphen or camel case capitalization used as a separator between the words supplied.
@@ -59,11 +59,11 @@
 
 
             <!--Where all the action is displayed -->
-            <div id="#passwordSection" class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 scottsSection">
-               
+            <section id="#passwordSection" class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 scottsSection">
+                  <h3>Your password is below</h3>
                   <!--//here is where the logic for the password generator is called and displayed-->
                   <?php require_once "logic.php"; ?>            
-            </div>
+            </section>
          </div>
 
 
@@ -75,15 +75,16 @@
 
                   <div class="form-group">
                      <label for="numberOfWords">Number of words between 1 and 9
-                        <input maxlength="1" type="number" name="numberOfWords" id="numberOfWords" value="" class="form-control scottsTextBox"> 
+                        <input maxlength="1" min="0" type="number" name="numberOfWords" id="numberOfWords" value="" class="form-control scottsTextBox"> 
                      </label>
                   </div>
                   <div class="form-group radio">  
                      <label>                  
                         <input type="radio" name="separator" value=" ">Use a space as a separator
                      </label>
-                  </div>
 
+
+                  </div>
                   <div class="form-group radio">
                      <label>
                         <input type="radio" name="separator" value="-">Use a - as a separator between the words
@@ -96,9 +97,9 @@
                      </label>
                   </div>
 
-                  <div class="form-group">
+                  <div class="form-group scottsPadding">
                      <label for="numSpecChar">Number of random special Characters between 1 and 9
-                        <input maxlength="1" type="number" name="numSpecChar" id="numSpecChar" value="" class="form-control scottsTextBox">
+                        <input maxlength="1" min="0" type="number" name="numSpecChar" id="numSpecChar" value="" class="form-control scottsTextBox">
                      </label>
                   </div>
 
@@ -109,9 +110,9 @@
                      </label>
                   </div>
 
-                  <div class="form-group">
-                     <label for="maximumLength">Maximum character length
-                        <input maxlength="3" type="number" name="maximumLength" id="maximumLength" value="" class="form-control scottsTextBox">
+                  <div class="form-group scottsPadding">
+                     <label for="maximumLength ">Maximum character length
+                        <input maxlength="3" min="0" type="number" name="maximumLength" id="maximumLength" value="" class="form-control scottsTextBox">
                      </label>
                   </div>
                  
@@ -129,7 +130,7 @@
       </footer>
 
 
-      <!-- Jquery for the tool tip-->
+      <!-- Jquery for the tool tip from w3c tutorials-->
       <script>
          $(document).ready(function(){
              $('[data-toggle="tooltip"]').tooltip();   

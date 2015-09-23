@@ -25,3 +25,9 @@
          {
             text-align: center;
          }
+
+         /*Improve some of the spacing in the form*/
+         .scottsPadding
+         {
+            padding-top: 5px; 
+         }
