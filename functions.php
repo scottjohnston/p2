@@ -41,7 +41,7 @@ Function readInFile($fname)
 function selectWords($words, $numOfWords, $separator)
 {
 	//pick a random word location 
-	$wordNumber = rand(0, (count($words) - 1));	
+	//$wordNumber = rand(0, (count($words) - 1));  //this should be removed	
 
 	//initialize the string variable
 	$password = "";

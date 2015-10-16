@@ -27,17 +27,41 @@
 
          <!-- Links to the other projects-->
          <div class="row">
-            <div class="center-block">
-               <ul class="list-inline nav nav-tabs nav-justified col-md-12 col-xs-12 col-sm-8 coll-sm-offset-1 col-lg-12 ">
-                  <li><a href="http://p1.scottvjohnston.me" data-toggle="tooltip" title="Project 1"> Project 1</a></li>
-                  <li><a href="https://github.com/scottjohnston/p1" data-toggle="tooltip" title="Github P1">Git project 1</a></li>
-                  <li><a href="http://p2.scottvjohnston.me" data-toggle="tooltip" title="Project 2">Project 2</a></li>
-                  <li><a href="https://github.com/scottjohnston/p2" data-toggle="tooltip" title="Github P2">git project 2</a></li>
-                  <li><a href="#" data-toggle="tooltip" title="Project 3">Project 3</a></li>
-                  <li><a href="#" data-toggle="tooltip" title="Github P3">git project 3</a></li>
-                  <li><a href="#" data-toggle="tooltip" title="Project 4">Project 4</a></li>
-                  <li><a href="#" data-toggle="tooltip" title="Github P4">git project 4</a></li>
+            <div class="center-block ">
+
+               <nav class="navbar navbar-default  " role="navigation">
+                <div class="navbar-header">
+
+               <button type="button" class="navbar-toggle " data-toggle="collapse" data-tog="tooltip" title="Links" data-target="#example-navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+
+               </button>
+
+
+               </div>
+
+
+               <div class="collapse navbar-collapse" id="example-navbar-collapse">
+
+               <ul class="list-inline nav nav-tabs nav-justified ">
+                  <li><a href="http://p1.scottvjohnston.me" data-tog="tooltip" title="Project 1"> Project 1</a></li>
+                  <li><a href="https://github.com/scottjohnston/p1" data-tog="tooltip" title="Github P1">Git project 1</a></li>
+                  <li><a href="http://p2.scottvjohnston.me" data-tog="tooltip" title="Project 2">Project 2</a></li>
+                  <li><a href="https://github.com/scottjohnston/p2" data-tog="tooltip" title="Github P2">git project 2</a></li>
+                  <li><a href="http://p3.scottvjohnston.me" data-tog="tooltip" title="Project 3">Project 3</a></li>
+                  <li><a href="https://github.com/scottjohnston/p2" data-tog="tooltip" title="Github P3">git project 3</a></li>
+                  <li><a href="#" data-tog="tooltip" title="Project 4">Project 4</a></li>
+                  <li><a href="#" data-tog="tooltip" title="Github P4">git project 4</a></li>
                </ul>
+
+            </div>
+            </nav>
+
+
+
             </div>
          </div>
 
@@ -47,10 +71,10 @@
             <section class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 form-group text scottsSection">
                <h2>Generate a password</h2>
                <p>
-                  Select the number of words to include in your password. 
+                  Select the number of words to include in your password.
                   Also select to have a space, a hyphen or camel case capitalization used as a separator between the words supplied.
-                  Add in between 1 and 9 special characters between the words and any number you may have selected. Select if you want 
-                  a random number between 1 and 1000 added to the end. 
+                  Add in between 1 and 9 special characters between the words and any number you may have selected. Select if you want
+                  a random number between 1 and 1000 added to the end.
                </p>
                <p>
                   If the number of words is not selected 4 words will be used
@@ -62,7 +86,7 @@
             <section id="#passwordSection" class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6 scottsSection">
                   <h3>Your password is below</h3>
                   <!--//here is where the logic for the password generator is called and displayed-->
-                  <?php require_once "logic.php"; ?>            
+                  <?php require_once "logic.php"; ?>
             </section>
          </div>
 
@@ -70,16 +94,16 @@
          <!--Where the form to select everything begins-->
          <div class="row">
             <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-10 coll-sm-offset-1 col-lg-offset-3 col-lg-6">
-               
+
                <form action="index.php" method="get" class="form-horizontal" >
 
                   <div class="form-group">
                      <label for="numberOfWords">Number of words between 1 and 9
-                        <input maxlength="1" min="0" type="number" name="numberOfWords" id="numberOfWords" value="" class="form-control scottsTextBox"> 
+                        <input maxlength="1" min="0" type="number" name="numberOfWords" id="numberOfWords" value="" class="form-control scottsTextBox">
                      </label>
                   </div>
-                  <div class="form-group radio">  
-                     <label>                  
+                  <div class="form-group radio">
+                     <label>
                         <input type="radio" name="separator" value=" ">Use a space as a separator
                      </label>
 
@@ -115,11 +139,11 @@
                         <input maxlength="3" min="0" type="number" name="maximumLength" id="maximumLength" value="" class="form-control scottsTextBox">
                      </label>
                   </div>
-                 
+
                   <p>
                      <input type="submit" value="Generate Password" class="btn btn-primary">
                   </p>
-               </form>           
+               </form>
             </div>
             <!-- end of the form-->
 
@@ -133,7 +157,7 @@
       <!-- Jquery for the tool tip from w3c tutorials-->
       <script>
          $(document).ready(function(){
-             $('[data-toggle="tooltip"]').tooltip();   
+             $('[data-tog="tooltip"]').tooltip();
          });
       </script>
 
