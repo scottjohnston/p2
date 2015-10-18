@@ -52,7 +52,7 @@
                   <li><a href="http://p2.scottvjohnston.me" data-tog="tooltip" title="Project 2">Project 2</a></li>
                   <li><a href="https://github.com/scottjohnston/p2" data-tog="tooltip" title="Github P2">git project 2</a></li>
                   <li><a href="http://p3.scottvjohnston.me" data-tog="tooltip" title="Project 3">Project 3</a></li>
-                  <li><a href="https://github.com/scottjohnston/p2" data-tog="tooltip" title="Github P3">git project 3</a></li>
+                  <li><a href="https://github.com/scottjohnston/p3" data-tog="tooltip" title="Github P3">git project 3</a></li>
                   <li><a href="#" data-tog="tooltip" title="Project 4">Project 4</a></li>
                   <li><a href="#" data-tog="tooltip" title="Github P4">git project 4</a></li>
                </ul>
